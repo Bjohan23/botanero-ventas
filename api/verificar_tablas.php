@@ -1,9 +1,9 @@
 <?php
 include_once "encabezado.php";
 include_once "funciones.php";
-$host = "localhost";
+$host = "monorail.proxy.rlwy.net";
 $usuario = "root";
-$password = "";
+$password = "OEUAbePCiTVtqIZGhCArxNlbTeGZXWzM";
 
 $conexion = new PDO("mysql:host=$host", $usuario, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
