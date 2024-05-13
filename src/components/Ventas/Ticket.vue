@@ -17,14 +17,14 @@
 
         <tr v-for="(insumo, index) in insumos" :key="index">
           <td>{{ insumo.nombre }}</td>
-          <td>${{ insumo.precio }} x {{ insumo.cantidad }}</td>
-          <td>${{ parseFloat(insumo.cantidad * insumo.precio) }}</td>
+          <td>S/{{ insumo.precio }} x {{ insumo.cantidad }}</td>
+          <td>S/{{ parseFloat(insumo.cantidad * insumo.precio) }}</td>
         </tr>
       </table>
-      <strong>TOTAL: ${{ venta.total }}</strong
+      <strong>TOTAL: S/{{ venta.total }}</strong
       ><br />
-      <strong>SU PAGO: ${{ venta.pagado }}</strong>
-      <strong>CAMBIO: ${{ venta.pagado - venta.total }}</strong>
+      <strong>SU PAGO: S/{{ venta.pagado }}</strong>
+      <strong>CAMBIO: S/{{ venta.pagado - venta.total }}</strong>
     </div>
   </section>
 </template>

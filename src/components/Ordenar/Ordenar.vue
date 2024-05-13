@@ -18,7 +18,7 @@
           class="has-text-weight-bold has-text-primary"
           style="font-size: 2.5em"
         >
-          ${{ total }}
+          S/{{ total }}
         </span>
         <b-button
           type="is-success"
@@ -123,7 +123,7 @@
                 <div class="content is-size-7">
                   {{ insumo.descripcion }}
                   <div class="has-text-centered has-text-weight-bold">
-                    ${{ insumo.precio }}
+                    S/{{ insumo.precio }}
                   </div>
                 </div>
               </div>

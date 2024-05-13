@@ -160,7 +160,7 @@
       </b-table-column>
 
       <b-table-column field="precio" label="Precio" sortable v-slot="props">
-        ${{ props.row.precio }}
+        S/{{ props.row.precio }}
       </b-table-column>
 
       <b-table-column field="acciones" label="Acciones" v-slot="props">

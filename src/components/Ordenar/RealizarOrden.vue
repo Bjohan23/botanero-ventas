@@ -17,7 +17,7 @@
                 <div class="box">
                     <p class="title is-2 has-text-grey">Mesa #{{ mesa.mesa.idMesa }}
                         <span class="title is-1 has-text-weight-bold is-pulled-right" v-if="mesa.mesa.total">
-                            ${{ mesa.mesa.total }}
+                            S/{{ mesa.mesa.total }}
                         </span>
                     </p>
                     <p v-if="mesa.mesa.atiende">
@@ -71,11 +71,11 @@
                                     </b-table-column>  
 
                                     <b-table-column field="cantidad" label="Cantidad" v-slot="props">
-                                        {{ props.row.cantidad }} X ${{  props.row.precio }}
+                                        {{ props.row.cantidad }} X S/{{  props.row.precio }}
                                     </b-table-column>                                        
                                     
                                     <b-table-column field="subtotal" label="Subtotal" v-slot="props">
-                                        ${{ props.row.cantidad * props.row.precio }}
+                                        S/{{ props.row.cantidad * props.row.precio }}
                                     </b-table-column>                                                                
                                     <b-table-column field="estado" label="" v-slot="props">
                                         <b-icon icon="alert" type="is-danger" v-if="props.row.estado ==='pendiente'"></b-icon>

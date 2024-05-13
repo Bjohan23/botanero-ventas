@@ -42,7 +42,7 @@
                     <p class="title is-4 has-text-grey ">
                         <b-icon icon="clock-outline"></b-icon>
                         Ventas por hora
-                        <span class="tag is-primary is-large is-pulled-right"> ${{totalVentasHora}}</span>
+                        <span class="tag is-primary is-large is-pulled-right"> S/{{totalVentasHora}}</span>
 
                     </p>
                     <b-field label="Selecciona un periodo de tiempo">
@@ -64,7 +64,7 @@
                     <p class="title is-4 has-text-grey ">
                         <b-icon icon="account"></b-icon>
                         Ventas de usuarios
-                        <span class="tag is-primary is-large is-pulled-right"> ${{totalVentasUsuarios}}</span>
+                        <span class="tag is-primary is-large is-pulled-right"> S/{{totalVentasUsuarios}}</span>
                     </p>
                     <b-field label="Selecciona un periodo de tiempo">
                         <b-datepicker
@@ -85,7 +85,7 @@
                     <p class="title is-4 has-text-grey ">
                         <b-icon icon="calendar-week"></b-icon>
                         Ventas de la semana
-                        <span class="tag is-primary is-large is-pulled-right"> ${{totalVentasSemana}}</span>
+                        <span class="tag is-primary is-large is-pulled-right"> S/{{totalVentasSemana}}</span>
                     </p>
                     
                     <div id="contenedor-semana">
@@ -98,7 +98,7 @@
             <p class="title is-4 has-text-grey ">
                 <b-icon icon="calendar-month"></b-icon>
                 Ventas por año 
-                <span class="tag is-primary is-large is-pulled-right"> ${{totalVentasMeses}}</span>
+                <span class="tag is-primary is-large is-pulled-right"> S/{{totalVentasMeses}}</span>
                 <b-field label="Selecciona un año">
                     <b-select
                         size="is-small"
@@ -165,7 +165,7 @@
                             {{ props.row.categoria }}
                         </b-table-column>
                         <b-table-column field="total" label="Total" v-slot="props">
-                            ${{ props.row.total }}
+                            S/{{ props.row.total }}
                         </b-table-column>
                         <b-table-column field="progreso" label="Progreso" v-slot="props">
                             <b-progress 
@@ -194,7 +194,7 @@
                             Mesa #{{ props.row.idMesa }}
                         </b-table-column>
                         <b-table-column field="total" label="Total" v-slot="props">
-                            ${{ props.row.total }}
+                            S/{{ props.row.total }}
                         </b-table-column>
                         <b-table-column field="progreso" label="Progreso" v-slot="props">
                             <b-progress 
@@ -324,7 +324,7 @@ export default ({
                     {
                         encabezado: "Ventas del día",
                         titulo: "Ventas hoy",
-                        total: "$" + this.resultadoCartas.totalVentasDia,
+                        total: "S/" + this.resultadoCartas.totalVentasDia,
                         icono: "cart-outline",
                         colorTexto: "has-text-info",
                         ruta: "/reporte-ventas"
@@ -356,7 +356,7 @@ export default ({
                     {
                         encabezado: "Total ventas",
                         titulo: "Ventas",
-                        total: "$" + this.resultadoCartas.totalVentas,
+                        total: "S/" + this.resultadoCartas.totalVentas,
                         icono: "cart-outline",
                         colorTexto: "has-text-primary",
                         ruta: "/reporte-ventas"
